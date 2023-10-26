@@ -2,19 +2,19 @@ import { Link } from "react-router-dom";
 
 export const NavBar = () => {
   return (
-    <ul className="flex">
-      <li className="bg-blue-900">
+    <div className="flex justify-between">
+      <div className="">
         <Link to="/">Home</Link>
-      </li>
-      <li>
+      </div>
+      <div>
         <Link to="/Ships">Ships</Link>
-      </li>
-      <li>
+      </div>
+      <div>
         <Link to="/Haulers">Haulers</Link>
-      </li>
-      <li>
+      </div>
+      <div className="">
         <Link to="/Docks">Docks</Link>
-      </li>
-    </ul>
+      </div>
+    </div>
   );
 };
