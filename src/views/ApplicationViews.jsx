@@ -4,6 +4,7 @@ import { NavBar } from "../components/NavBar";
 import { Ships } from "../components/Ships";
 import { Haulers } from "../components/Haulers";
 import { EditHaulers } from "../components/EditHaulers";
+import { Docks } from "../components/Docks";
 
 export const ApplicationViews = () => {
   return (
@@ -24,7 +25,7 @@ export const ApplicationViews = () => {
           <Route path=":id" element={<EditHaulers />} />
         </Route>
         ;
-        <Route path="Docks" element={<>Docks</>} />;
+        <Route path="Docks" element={<Docks />} />;
       </Route>
     </Routes>
   );
