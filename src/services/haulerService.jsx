@@ -15,3 +15,9 @@ export const editHauler = (hauler) => {
     body: JSON.stringify(hauler),
   });
 };
+
+export const getExpandedHauler = () => {
+  return fetch(`http://localhost:8000/haulers?_expand=dock`).then((res) =>
+    res.json()
+  );
+};

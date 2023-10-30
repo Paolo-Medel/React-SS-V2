@@ -42,7 +42,7 @@ export const EditHaulers = () => {
           <input
             type="text"
             required
-            value={hauler.name}
+            value={hauler.name ? hauler.name : ""}
             onChange={(event) => {
               const copy = { ...hauler };
               copy.name = event.target.value;
@@ -58,8 +58,9 @@ export const EditHaulers = () => {
               copy.dock_id = parseInt(event.target.value);
               setHauler(copy);
             }}
+            defaultValue={0}
           >
-            <option value="none" selected disabled hidden>
+            <option value={0} disabled>
               Select an Option
             </option>
             {docks.map((obj) => {
